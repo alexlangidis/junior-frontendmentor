@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+/* font-family: 'Space Mono', monospace;
+*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    /* ### Primary */
+
+    --Stroncyan: hsl(172, 67%, 45%);
+
+    /* ### Neutral */
+    
+    --Verdarcyan: hsl(183, 100%, 15%);
+    --Dargrayiscyan: hsl(186, 14%, 43%);
+    --Grayiscyan: hsl(184, 14%, 56%);
+    --Lighgrayiscyan: hsl(185, 41%, 84%);
+    --Verlightgrayiscyan: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+    
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+
+body{
+    background-color: var(--Lighgrayiscyan);
+    font-family: 'Space Mono', monospace;
+}
+
+.logo{
+    margin-bottom: 6rem;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.white-box {
+    background-color: var(--White);
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 900px
+    
+}
+
+.part-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 45%;
+}
+
+
+.billing-label{
+    display: flex;
+    flex-direction: column;
+}
+
+input:not(.custom-input){
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: var(--Verlightgrayiscyan);
+    font-size: 1.3rem;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: var(--Verdarcyan);
+    background-repeat: no-repeat;
+    background-position: 10px;
+    width: 100%;
+}
+
+input:focus {
+    outline: 2px solid var(--Stroncyan);
+}
+
+::placeholder {
+    color: var(--Grayiscyan);
+    opacity: 0.7;
+}
+
+.billing-label input {
+    background-image: url(../tip-calculator-app/images/icon-dollar.svg);
+}
+
+.label-titles {
+    color: var(--Grayiscyan);
+}
+#select-tip{
+    margin-top: 2rem;
+}
+
+.tips-label {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    row-gap: 0.8rem;
+    column-gap: 1rem;
+    margin-top: 0.7rem;
+    margin-bottom: 2.5rem;
+}
+
+.tips {
+    height: 50px;
+    background-color: var(--Verdarcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--White);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tips:hover {
+    background-color: var(--Lighgrayiscyan);
+    color: var(--Verdarcyan);
+}
+
+.active-tip{
+    background-color: var(--Lighgrayiscyan);
+    color: var(--Verdarcyan);
+}
+
+
+.custom-input{
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-right: 1.2rem;
+    font-size: 1.5rem;
+    text-align: right;
+    font-family: 'Space Mono', monospace;
+    color: var(--Verdarcyan);
+    border-radius: 5px;
+    background-color: var(--Verlightgrayiscyan);
+    font-size: 1rem;
+}
+
+.last-labels{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.error {
+   display: none;
+   color: rgb(255, 95, 95);
+}
+
+.people-label input {
+    background-image: url(../tip-calculator-app/images/icon-person.svg);
+    
+}
+
+.part-two{
+    background: var(--Verdarcyan);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 50%;
+}
+
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.labels label {
+    color: var(--White);
+}
+
+.labels p {
+    color: var(--Dargrayiscyan);
+    font-size: 0.8rem;
+}
+
+.labels h2 {
+    color: var(--Stroncyan);
+    font-size: 2.5rem;
+}
+
+button{
+    margin-top: 6rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--Lighgrayiscyan);
+    color: var(--Verdarcyan);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 1000px){
+
+    .logo{
+        margin-top: 6rem;
+        margin-bottom: 2rem;
+    }
+    
+    .white-box {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+
+    .part-one, .part-two{
+        width: auto;
+    }
+
+
+ }
