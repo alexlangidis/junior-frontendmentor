@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../app/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../app/script.js" defer></script>
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: white;
+      }
+      .attribution a {
+        color: hsl(199, 100%, 49%);
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col m-auto h-screen w-[100%] transition-all ease-in-out duration-300"
+  >
+    <!-- Sign-up form start -->
+
+    <div class="container">
+      <div class="container-img mobile-img md:desktop-img"></div>
+      <div class="container-text p-8">
+        <h2 class="font-bold text-4xl my-4">Stay updated!</h2>
+        <p class="my-4">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="list-image-checkmark list-inside">
+          <li class="my-2">Product discovery and building what matters</li>
+          <li class="my-2">Measuring to ensure updates are a success</li>
+          <li class="my-2">And much more!</li>
+        </ul>
+        <div class="form-container pt-4">
+          <form action="">
+            <div class="">
+              <label for="" class="flex justify-between text-sm">
+                <p class="font-semibold">Email address</p>
+                <p class="text-red-600 hidden" id="email-error">
+                  Valid email required
+                </p>
+              </label>
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="input-email"
+              placeholder="email@company.com"
+              class=""
+            />
+          </form>
+          <button type="submit" class="btn" id="submitBtn">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sign-up form end -->
+
+    <!-- Success message start -->
+
+    <div class="container-success hidden">
+      <div class="p-8">
+        <img src="../app/images/icon-success.svg" alt="" />
+        <h2 class="font-bold text-4xl my-8">Thanks for subscribing!</h2>
+        <p class="my-4" id="confirmMessage"></p>
+        <button class="btn" id="dismissBtn">Dismiss message</button>
+      </div>
+    </div>
+
+    <!-- Success message end -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alexlag7" target="_blank"
+        >alexlag7</a
+      >.
+    </div>
+  </body>
+</html>
