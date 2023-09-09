@@ -618,7 +618,7 @@ video {
 
 .unread {
   cursor: pointer;
-  background-color: var(--Lightgrayishblue1);
+  background-color: var(--Verylightgrayishblue);
 }
 
 .avatar {

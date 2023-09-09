@@ -60,7 +60,7 @@ body {
   }
 
   .unread {
-    @apply bg-[var(--Lightgrayishblue1)] cursor-pointer;
+    @apply bg-[var(--Verylightgrayishblue)] cursor-pointer;
   }
 
   .avatar {
