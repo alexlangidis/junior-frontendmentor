@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+:root {
+  /* ###Primary */
+
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Verylightgrayishblue: hsl(210, 60%, 98%);
+  --Lightgrayishblue1: hsl(211, 68%, 94%);
+  --Lightgrayishblue2: hsl(205, 33%, 90%);
+  --Grayishblue: hsl(219, 14%, 63%);
+  --Darkgrayishblue: hsl(219, 12%, 42%);
+  --Verydarkblue: hsl(224, 21%, 14%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  font-size: 16px;
+  background-color: var(--Verylightgrayishblue);
+}
+
+.test {
+  border: 1px solid red;
+}
+
+@layer components {
+  .container {
+    @apply flex flex-col w-[100%] max-w-[480px] md:max-w-[768px] bg-white p-8 rounded-lg
+    transition-all ease-in-out duration-500;
+  }
+
+  .container-head {
+    @apply flex justify-between items-center py-4;
+  }
+
+  .container-head h2 {
+    @apply text-lg font-bold text-[#1c202b];
+  }
+
+  .container-head p {
+    @apply text-[var(--Darkgrayishblue)] cursor-pointer;
+  }
+
+  .notification {
+    @apply flex  p-4 rounded-lg mt-4;
+  }
+
+  .unread {
+    @apply bg-[var(--Lightgrayishblue1)] cursor-pointer;
+  }
+
+  .avatar {
+    @apply mr-4;
+  }
+
+  .avatar img {
+    @apply w-[100%] max-w-[60px] h-auto;
+  }
+
+  .name {
+    @apply text-[#1c202b] font-bold;
+  }
+
+  .notif-info {
+    @apply w-[100%] max-w-[400px] md:max-w-[550px];
+  }
+
+  .notif-count {
+    @apply bg-[var(--Blue)] rounded-md p-2 px-4 text-white font-bold;
+  }
+
+  .notif-time {
+    @apply text-[var(--Grayishblue)];
+  }
+
+  .notif-dot {
+    @apply content-none bg-[var(--Red)] w-[8px] h-[8px] ml-1 rounded-full inline-block;
+  }
+
+  .important-text {
+    @apply text-[var(--Darkgrayishblue)] font-bold;
+  }
+
+  .private-message {
+    @apply border-2 rounded-lg p-4 mt-4 hover:bg-[var(--Lightgrayishblue1)] cursor-pointer;
+  }
+}
