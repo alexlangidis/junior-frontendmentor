@@ -1,13 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Bai Jamjuree", sans-serif;
 }
 
 :root {
@@ -23,8 +23,8 @@
 }
 
 body {
-  font-family: "Bai Jamjuree", sans-serif;
   font-size: 18px;
+  font-family: "Bai Jamjuree", sans-serif;
 }
 
 .attribution {
@@ -37,6 +37,12 @@ body {
 
 .test {
   border: 1px solid red;
+}
+
+@layer base {
+  html {
+    font-family: "Bai Jamjuree", sans-serif;
+  }
 }
 
 @layer components {
