@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+  /* ### Neutral */
+
+  --PaleBlue: hsl(243, 100%, 93%);
+  --GrayishBlue: hsl(229, 7%, 55%);
+  --DarkBlue: hsl(228, 56%, 26%);
+  --VeryDarkBlue: hsl(229, 57%, 11%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/* 
+ */
+
+@layer components {
+  body {
+    @apply text-sm flex flex-col w-[100%] h-screen m-auto justify-center items-center 
+    bg-[url(../images/bg-mobile.png)] bg-no-repeat bg-cover bg-center  
+    md:bg-[url(../images/bg-desktop.png)] md:bg-bottom md:bg-contain md:bg-repeat-x
+    md:bg-[var(--VeryDarkBlue)]
+    transition-all duration-300 ease-in-out;
+  }
+
+  .container {
+    @apply flex flex-col w-[100%] h-[100%] m-auto justify-center items-center
+    gap-4 p-4  md:flex-row;
+  }
+
+  .container-files {
+    @apply flex flex-col w-[100%] max-w-[400px] h-[100%] max-h-[200px]
+    bg-[var(--DarkBlue)]  p-8 rounded-xl rounded-tr-[100px];
+  }
+
+  .logo {
+    @apply ml-4 my-4;
+  }
+
+  .icons {
+    @apply flex p-4 gap-4;
+  }
+
+  .icons img {
+    @apply bg-[var(--VeryDarkBlue)] p-4 w-[50px] h-[50px] rounded-md cursor-pointer hover:opacity-80;
+  }
+
+  .container-storage {
+    @apply flex flex-col w-[100%] max-w-[400px]   h-[100%] max-h-[200px]
+    bg-[var(--DarkBlue)] text-[var(--PaleBlue)] p-8 
+     justify-center items-center rounded-2xl md:max-w-[600px] relative;
+  }
+
+  .text {
+    @apply md:self-start;
+  }
+
+  .bar {
+    @apply w-[100%] h-[20px] bg-[var(--VeryDarkBlue)] rounded-3xl mt-4 mb-2 flex items-center;
+  }
+
+  .insidebar {
+    @apply w-[80%] h-[16px] bg-gradient-to-r from-pink-200 via-rose-400 to-pink-500 rounded-3xl flex justify-end ml-0.5;
+  }
+
+  .whiteball {
+    @apply w-[16px] h-[16px] bg-white rounded-full;
+  }
+
+  .gb-from-to {
+    @apply flex w-[100%] justify-between font-bold;
+  }
+
+  .gb-remain {
+    @apply bg-white flex rounded-xl p-4  m-auto w-[100%] max-w-[150px] justify-around items-center absolute 
+    top-[80%] left-[50%] translate-x-[-50%]
+    md:top-[-20%] md:right-[-50%] md:translate-x-[-70%]
+    md:rounded-br-none;
+  }
+
+  .gb-remain p {
+    @apply text-[var(--GrayishBlue)] font-semibold;
+  }
+
+  .gb-remain-number {
+    @apply text-[var(--VeryDarkBlue)] text-3xl font-bold;
+  }
+
+  .triangle {
+    @apply hidden md:block absolute 
+    bottom-[-20px] right-0 
+    border-l-[25px] border-l-transparent 
+    border-t-[25px] border-t-white;
+  }
+}
