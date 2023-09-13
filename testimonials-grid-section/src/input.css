@@ -44,14 +44,14 @@
 
 @layer components {
   body {
-    @apply flex flex-col w-full h-full justify-center items-center m-auto 
+    @apply flex flex-col w-full h-full justify-center items-center m-auto md:m-0
     bg-[var(--Lightgrayishblue)];
   }
 
   .container {
     @apply flex flex-col w-full h-full p-5 gap-8 
     md:p-0
-    xl:flex-row xl:max-w-[1600px]
+    xl:flex-row xl:max-w-[1600px] 
     transition-all ease-in-out duration-500;
   }
 
@@ -65,7 +65,7 @@
   }
 
   .testimonial-text {
-    @apply flex-col my-4 w-full h-full;
+    @apply flex-col my-4;
   }
 
   .testimonial-text h2 {
@@ -73,7 +73,7 @@
   }
 
   .testimonial-text p {
-    @apply text-[var(--White)] text-[18px] tracking-wide mr-6 mt-6 opacity-70;
+    @apply text-[var(--White)] text-[18px] tracking-wide mr-6 mt-6 opacity-70 w-full;
   }
 
   .avatar img {
