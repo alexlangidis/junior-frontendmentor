@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --Moderateviolet: hsl(263, 55%, 52%);
+  --Verydarkgrayishblue: hsl(217, 19%, 35%);
+  --Verydarkblackishblue: hsl(219, 29%, 14%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Neutral */
+
+  --Lightgray: hsl(0, 0%, 81%);
+  --Lightgrayishblue: hsl(210, 46%, 95%);
+
+  /* Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.test {
+  border: 1px solid red;
+}
+
+@layer components {
+  body {
+    @apply flex flex-col w-full h-full justify-center items-center m-auto 
+    bg-[var(--Lightgrayishblue)];
+  }
+
+  .container {
+    @apply flex flex-col w-full h-full p-5 gap-8 
+    md:p-0
+    xl:flex-row xl:max-w-[1600px]
+    transition-all ease-in-out duration-500;
+  }
+
+  .testimonial {
+    @apply flex-col justify-center items-center rounded-md p-8 my-8 shadow-2xl
+    xl:my-4;
+  }
+
+  .testimonial-head {
+    @apply flex items-center;
+  }
+
+  .testimonial-text {
+    @apply flex-col my-4 w-full h-full;
+  }
+
+  .testimonial-text h2 {
+    @apply text-[var(--White)] text-3xl;
+  }
+
+  .testimonial-text p {
+    @apply text-[var(--White)] text-[18px] tracking-wide mr-6 mt-6 opacity-70;
+  }
+
+  .avatar img {
+    @apply rounded-full mr-6;
+  }
+
+  .quote {
+    @apply absolute z-0 top-0 right-4 md:right-24 w-[150px];
+  }
+
+  .fullName {
+    @apply text-[var(--White)] text-xl;
+  }
+
+  .status {
+    @apply text-[var(--White)] text-xl opacity-50;
+  }
+
+  #featured img {
+    @apply border-4 border-purple-500;
+  }
+
+  .section1 {
+    @apply md:w-[100%] xl:w-[75%];
+  }
+
+  .row {
+    @apply xl:flex xl:gap-8 xl:my-0;
+  }
+
+  .section2 {
+    @apply md:w-[100%] 
+    xl:w-[25%] xl:my-4;
+  }
+
+  .box1 {
+    @apply relative bg-[var(--Moderateviolet)] basis-[70%]
+    bg-no-repeat bg-[80%_0%];
+  }
+
+  .box2 {
+    @apply bg-[var(--Verydarkgrayishblue)] basis-[30%];
+  }
+
+  .box3 {
+    @apply bg-[var(--White)] basis-[30%];
+  }
+
+  .box4 {
+    @apply bg-[var(--Verydarkblackishblue)] basis-[70%] mb-0 xl:mb-4;
+  }
+
+  .box5 {
+    @apply bg-[var(--White)] basis-[20%] m-0 h-full;
+  }
+
+  .box3 .fullName,
+  .box5 .fullName {
+    @apply text-[var(--Verydarkblackishblue)] opacity-100;
+  }
+
+  .box3 h2,
+  .box5 h2 {
+    @apply text-[var(--Verydarkgrayishblue)];
+  }
+
+  .box3 p,
+  .box5 p {
+    @apply text-[var(--Verydarkgrayishblue)];
+  }
+}
