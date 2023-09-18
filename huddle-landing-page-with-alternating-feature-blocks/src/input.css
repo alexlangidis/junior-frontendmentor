@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --Pink: hsl(322, 100%, 66%);
+  --LightPink: hsl(321, 100%, 78%);
+  --LightRed: hsl(0, 100%, 63%);
+
+  /* ### Neutral */
+
+  --VeryPaleCyan: hsl(193, 100%, 96%);
+  --VeryDarkCyan: hsl(192, 100%, 9%);
+  --GrayishBlue: hsl(208, 11%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all ease-in-out 0.3s;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.test {
+  border: 1px solid red;
+}
+
+@layer components {
+  body {
+    @apply text-[18px] font-['Open_Sans'] w-full flex flex-col justify-center m-auto;
+  }
+
+  .header {
+    @apply w-full pb-20 bg-[var(--VeryPaleCyan)] bg-[url('../images/bg-hero-mobile.svg')] bg-cover bg-no-repeat bg-center
+    md:bg-[url('../images/bg-hero-desktop.svg')];
+  }
+
+  .header-container {
+    @apply flex justify-between items-center  max-w-[1440px] m-auto p-4
+    md:p-10;
+  }
+
+  .header-btn {
+    @apply font-['Poppins'] bg-white shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] py-2 px-12 rounded-full hover:opacity-70;
+  }
+
+  .hero {
+    @apply flex flex-col w-full justify-center items-center pt-10 
+    xl:flex-row xl:justify-around xl:max-w-[1440px] xl:m-auto;
+  }
+
+  .hero-text {
+    @apply text-center px-10 w-full h-full md:max-w-[1000px] xl:max-w-[590px] xl:text-left xl:p-8;
+  }
+
+  .hero h2 {
+    @apply text-3xl font-['Poppins'] m-8 text-[var(--VeryDarkCyan)] xl:m-0 xl:my-8 xl:text-[40px];
+  }
+
+  .hero p {
+    @apply text-[var(--VeryDarkCyan)] mb-8;
+  }
+
+  .hero img {
+    @apply w-full h-full px-10 md:max-w-[800px] mt-8;
+  }
+
+  .btn {
+    @apply bg-[var(--Pink)] text-white font-bold rounded-3xl px-14 py-4 my-4 shadow-md hover:bg-[var(--LightPink)];
+  }
+
+  .body-container {
+    @apply flex flex-col w-full justify-center items-center m-auto pt-40 px-10
+    md:max-w-[1000px] 
+    xl:max-w-[1440px];
+  }
+
+  .section {
+    @apply flex flex-col w-full justify-center items-center shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] rounded-xl p-4 m-4 
+    xl:flex-row xl:justify-around;
+  }
+
+  .section-text {
+    @apply flex flex-col justify-center items-center text-center m-4 
+    xl:items-start xl:text-start;
+  }
+
+  .section-text h2 {
+    @apply text-4xl font-bold font-['Poppins'] text-[var(--VeryDarkCyan)] mb-8;
+  }
+
+  .section-text p {
+    @apply text-[18px] text-[var(--GrayishBlue)] 
+    md:max-w-[570px] 
+    xl:max-w-[500px];
+  }
+
+  .section img {
+    @apply w-full h-full px-12 mt-12 mb-12 
+    md:mb-24 md:max-w-[600px];
+  }
+
+  .section1,
+  .section3 {
+    @apply xl:flex-row-reverse;
+  }
+
+  .footer-container {
+    @apply bg-[var(--VeryDarkCyan)] text-white mt-80 flex flex-col p-8;
+  }
+
+  .float-box {
+    @apply flex flex-col justify-center items-center bg-white text-black rounded-xl shadow-[0_0_20px_-5px_rgba(0,0,0,0.3)] translate-y-[-70%] p-8 m-auto w-full max-w-[440px] md:max-w-[600px] 
+    xl:max-w-[800px];
+  }
+
+  .menu-area {
+    @apply flex flex-col p-2  md:flex-row md:justify-evenly md:gap-12 pt-6;
+  }
+
+  .logo-text {
+    @apply md:w-[470px];
+  }
+
+  .row {
+    @apply flex p-2 my-4;
+  }
+
+  .row img {
+    @apply mr-4 w-[25px] h-[25px];
+  }
+
+  .footer-menu {
+    @apply flex flex-col p-2 mt-4 md:min-w-[150px]
+    xl:flex-row xl:justify-between xl:w-[360px];
+  }
+
+  .footer-menu a {
+    @apply my-2 flex flex-col hover:underline;
+  }
+
+  .social-icons {
+    @apply flex flex-col justify-center items-center
+    md:justify-between md:items-start;
+  }
+
+  .icons {
+    @apply flex justify-center gap-6 text-2xl mt-10 mb-8;
+  }
+
+  .icons i {
+    @apply border-2 rounded-full w-[50px] h-[50px] flex justify-center items-center  m-auto cursor-pointer hover:text-[var(--LightRed)];
+  }
+}
