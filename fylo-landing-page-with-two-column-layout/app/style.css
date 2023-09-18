@@ -1085,14 +1085,6 @@ body{
   color: hsl(228, 45%, 44%);
 }
 
-.test {
-  border: 1px solid red;
-}
-
-.hover\:opacity-75:hover{
-  opacity: 0.75;
-}
-
 .hover\:opacity-80:hover{
   opacity: 0.8;
 }

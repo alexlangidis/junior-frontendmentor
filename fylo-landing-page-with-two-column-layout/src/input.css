@@ -35,10 +35,6 @@
   color: hsl(228, 45%, 44%);
 }
 
-.test {
-  border: 1px solid red;
-}
-
 @layer components {
   body {
     @apply flex flex-col w-full m-auto justify-center items-center text-[16px] font-['Open_Sans'];
