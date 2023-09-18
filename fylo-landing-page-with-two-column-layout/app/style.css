@@ -868,6 +868,13 @@ body{
   }
 }
 
+@media (min-width: 1280px){
+  .footer-container{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
 .contact-info{
   margin-bottom: 1rem;
   display: flex;
@@ -1074,6 +1081,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: all ease-in-out 0.3s;
 }
 
 .attribution {
