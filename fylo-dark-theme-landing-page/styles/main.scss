@@ -1,0 +1,30 @@
+@import 'base/reset';
+@import 'base/fonts';
+@import 'abstracts/colors';
+@import 'abstracts/mixins';
+@import 'components/nav';
+@import 'components/hero';
+@import 'components/features';
+@import 'components/howitworks';
+@import 'components/testimonials';
+@import 'components/getearly';
+@import 'components/footer';
+
+
+
+
+body{
+    background-color: $DarkBlue-intro-email;
+    font-size: 14px;
+    font-family: $font-OpenSans;
+    color: $White;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+      }
+  }

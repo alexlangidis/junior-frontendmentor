@@ -1,0 +1,41 @@
+header{
+    @include flexCenter(row);
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1440px;
+    margin: auto;
+    background-color: $DarkBlue-intro-email;
+
+    nav{
+
+        ul{
+            @include flexCenter(row);
+        }
+
+        li{
+            list-style: none;
+            padding: 0.8rem;
+        }
+
+        a{
+            font-family: $font-Raleway;
+            font-size: 16px;
+            text-decoration: none;
+
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+       
+    }
+}
+
+@media only screen and (max-width: 515px ) {
+
+    header{
+        @include flexCenter(column);
+        justify-content: center;
+    }
+
+}

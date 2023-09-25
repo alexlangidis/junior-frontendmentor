@@ -1,0 +1,43 @@
+.features{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2rem;
+
+    .feature{
+        @include flexCenter(column);
+        text-align: center;
+        max-width: 520px;
+        margin: auto;
+
+        img{
+            margin-top: 6rem;
+            margin-bottom: 3rem;
+        }
+
+        h2{
+            font-family: $font-Raleway;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            font-size: 1.2rem;
+            font-family: $font-Raleway;
+            
+        }
+    }
+}
+
+
+@media only screen and (min-width: 1000px) {
+    .features{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 1440px;
+    
+    }
+    
+}
