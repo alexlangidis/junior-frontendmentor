@@ -1,0 +1,50 @@
+@import 'base/index';
+@import 'abstracts/index';
+@import 'components/index';
+
+body{
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+}
+
+body::before{
+    content: '';
+    position: absolute;
+    background-color: $LightGrayishBlue;
+    top: 0;
+    right: -10%;
+    width: 50%;
+    height: 60%;
+    border-radius: 0 0 0 55px;
+    z-index: -1;
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+
+    a {
+        color: hsl(228, 45%, 44%);
+    }
+  }
+
+.hidden{
+    display: none;
+}
+
+.test{
+    border: 1px solid red;
+}
+
+h1,
+h2,
+li,
+.cta {
+  font-family: $font-BarlowCondensed;
+}
+
+p {
+  line-height: 1.8;
+}
