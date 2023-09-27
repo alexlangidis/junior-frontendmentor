@@ -1,0 +1,15 @@
+button{
+    padding: 0.8rem 3rem;
+    border: 1px solid $VeryLightGray;
+    background-color: transparent;
+    color: $VeryLightGray;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 999;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $VeryLightGray;
+        color: $DarkViolet;
+    }
+}

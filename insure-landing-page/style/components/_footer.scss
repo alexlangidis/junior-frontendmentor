@@ -1,0 +1,115 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+    background-color: $VeryLightGray;
+    padding: 4rem;
+    position: relative;
+
+    #bg-footer{
+        position: absolute;
+        top: 0;
+        left: 0%;
+        
+    }
+
+    .logo-social{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $DarkGrayishViolet;
+        width: 100%;
+        max-width: 400px;
+        padding: 0 2rem;
+        z-index: 1;
+       
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+
+        .social{
+            display: flex;
+            gap: 20px;
+            margin-bottom: 2rem;
+            
+            img:hover{
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .footer-menu{
+        display: grid;
+        grid-template-columns: 1fr;
+        z-index: 1;
+
+        .menu-col{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            text-transform: uppercase;
+            
+
+            h3{
+                color: $DarkGrayishViolet;
+                margin: 3rem;
+            }
+
+            a{
+                text-decoration: none;
+                margin-bottom: 1rem;
+                font-family: $font-Karla;
+                color: $VeryDarkViolet;
+                font-weight: bold;
+
+                &:hover{
+                    text-decoration: underline;
+                    color: $DarkViolet;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (min-width: 768px){
+    footer{
+
+
+
+        .logo-social{
+            flex-direction: row;
+            justify-content: space-between;
+            max-width: 1440px;
+        }
+
+        .footer-menu{
+            grid-template-columns: repeat(4,1fr);
+            max-width: 1440px;
+            width: 100%;
+            gap: 50px;
+                
+    
+            .menu-col{
+                text-align: start;
+                text-transform: uppercase;
+                
+                h3{
+                    margin: 3rem 0;
+                }
+    
+            }
+        }
+
+    }
+
+}

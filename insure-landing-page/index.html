@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../insure-landing-page/style/main.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../insure-landing-page/script/script.js" defer></script>
+
+    <title>Frontend Mentor | Insure landing page</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="../insure-landing-page/images/logo.svg" alt="logo" />
+      </div>
+      <div class="menu-mobile">
+        <img
+          src="../insure-landing-page/images/icon-hamburger.svg"
+          alt="menu"
+          class="ham"
+        />
+        <img
+          src="../insure-landing-page/images/icon-close.svg"
+          alt="menu-close-icon"
+          class="close hidden"
+        />
+      </div>
+      <div class="menu-desktop">
+        <nav>
+          <ul>
+            <li><a href="#">How we work</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a></li>
+            <li><a href="#" id="btn-vp">View plans</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="menu-mobile-container animate__animated hidden">
+      <ul>
+        <li><a href="#">How we work</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#" id="btn-vp1">View plans</a></li>
+      </ul>
+      <img
+        src="../insure-landing-page/images/bg-pattern-mobile-nav.svg"
+        alt="bg-menu"
+      />
+    </nav>
+
+    <!--Hero container-->
+    <div class="hero-bg">
+      <picture class="bg-right">
+        <source
+          media="(min-width: 400px)"
+          srcset="
+            ../insure-landing-page/images/bg-pattern-intro-right-desktop.svg
+          "
+        />
+        <img
+          src="../insure-landing-page/images/bg-pattern-intro-right-mobile.svg"
+          alt="into-img"
+        />
+      </picture>
+      <picture class="bg-left">
+        <source
+          media="(min-width: 400px)"
+          srcset="
+            ../insure-landing-page/images/bg-pattern-intro-left-desktop.svg
+          "
+        />
+        <img
+          src="../insure-landing-page/images/bg-pattern-intro-left-mobile.svg"
+          alt="into-img"
+        />
+      </picture>
+      <div class="hero-container">
+        <div class="hero-img">
+          <picture>
+            <source
+              media="(min-width: 375px)"
+              srcset="../insure-landing-page/images/image-intro-desktop.jpg"
+            />
+            <img
+              src="../insure-landing-page/images/image-intro-mobile.jpg"
+              alt="into-img"
+            />
+          </picture>
+        </div>
+        <div class="hero-text">
+          <div class="line"></div>
+          <h2>Humanizing your insurance.</h2>
+          <p>
+            Get your life insurance coverage easier and faster. We blend our
+            expertise and technology to help you find the plan that’s right for
+            you. Ensure you and your loved ones are protected.
+          </p>
+          <button>View plans</button>
+        </div>
+      </div>
+    </div>
+
+    <!--Features container-->
+
+    <div class="features-container">
+      <div class="features-title">
+        <div class="line2"></div>
+        <h2>We’re different</h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <img
+            src="../insure-landing-page/images/icon-snappy-process.svg"
+            alt="img"
+          />
+          <h2>Snappy Process</h2>
+          <p>
+            Our application process can be completed in minutes, not hours.
+            Don’t get stuck filling in tedious forms.
+          </p>
+        </div>
+
+        <div class="feature">
+          <img
+            src="../insure-landing-page/images/icon-affordable-prices.svg"
+            alt="img"
+          />
+          <h2>Affordable Prices</h2>
+          <p>
+            We don’t want you worrying about high monthly costs. Our prices may
+            be low, but we still offer the best coverage possible.
+          </p>
+        </div>
+
+        <div class="feature">
+          <img
+            src="../insure-landing-page/images/icon-people-first.svg"
+            alt="img"
+          />
+          <h2>People First</h2>
+          <p>
+            Our plans aren’t full of conditions and clauses to prevent payouts.
+            We make sure you’re covered when you need it.
+          </p>
+        </div>
+
+        <!--CTA container-->
+      </div>
+      <div class="cta-container">
+        <h2>Find out more about how we work</h2>
+        <button id="btn-hww">How we work</button>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ../insure-landing-page/images/bg-pattern-how-we-work-desktop.svg
+            "
+          />
+          <img
+            src="../insure-landing-page/images/bg-pattern-how-we-work-mobile.svg"
+            alt=""
+          />
+        </picture>
+      </div>
+    </div>
+
+    <!--Footer container-->
+    <footer>
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="../insure-landing-page/images/bg-pattern-footer-desktop.svg"
+        />
+        <img
+          src="../insure-landing-page/images/bg-pattern-footer-mobile.svg"
+          alt=""
+          id="bg-footer"
+        />
+      </picture>
+      <div class="logo-social">
+        <div class="logo">
+          <img src="../insure-landing-page/images/logo.svg" alt="logo" />
+        </div>
+        <div class="social">
+          <img
+            src="../insure-landing-page/images/icon-facebook.svg"
+            alt="social"
+          />
+          <img
+            src="../insure-landing-page/images/icon-twitter.svg"
+            alt="social"
+          />
+          <img
+            src="../insure-landing-page/images/icon-pinterest.svg"
+            alt="social"
+          />
+          <img
+            src="../insure-landing-page/images/icon-instagram.svg"
+            alt="social"
+          />
+        </div>
+      </div>
+
+      <div class="footer-menu">
+        <div class="menu-col">
+          <h3>Our company</h3>
+          <a href="#">How we work</a>
+          <a href="#">Why Insure?</a>
+          <a href="#">View plans</a>
+          <a href="#">Reviews</a>
+        </div>
+
+        <div class="menu-col">
+          <h3>Help me</h3>
+          <a href="#">FAQ</a>
+          <a href="#">Terms of use</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Cookies</a>
+        </div>
+
+        <div class="menu-col">
+          <h3>Contact</h3>
+          <a href="#">Sales</a>
+          <a href="#">Support</a>
+          <a href="#">Live chat</a>
+        </div>
+
+        <div class="menu-col">
+          <h3>Others</h3>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+          <a href="#">Licenses</a>
+        </div>
+      </div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alexlangidis"
+        >AlexLag-Dev</a
+      >.
+    </div>
+  </body>
+</html>

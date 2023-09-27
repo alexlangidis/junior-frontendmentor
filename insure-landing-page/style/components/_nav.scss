@@ -1,0 +1,76 @@
+header {
+    @include flexCenter(row);
+    justify-content: space-between;
+    margin: auto;
+    padding: 2rem;
+    flex-wrap: wrap;
+
+    img:hover{
+        cursor: pointer;
+    }
+
+    .menu-desktop{
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (min-width:  645px){
+   
+    header {
+        max-width: 1440px;
+
+        .menu-mobile{
+            display: none;
+        }
+       
+        .menu-desktop{
+            display: inline-block;
+
+          nav ul{
+                display: flex;
+
+                li{
+                    list-style: none;
+                    padding: 1rem;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                a{
+                    text-decoration: none;
+                    color: $DarkGrayishViolet;
+                    text-transform: uppercase;
+
+                    &:hover{
+                        text-decoration: underline;
+                        color: $DarkViolet;
+                    }
+
+                    &:last-child:hover{
+                        text-decoration: none;
+                        color: $DarkViolet;
+                    }
+                }
+
+
+
+                #btn-vp{
+                    border: 1px solid black;
+                    padding: 0.8rem 3rem;
+                    color: black;
+
+                    &:hover{
+                        cursor: pointer;
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+   
+}
+
