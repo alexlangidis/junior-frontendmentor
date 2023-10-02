@@ -59,27 +59,9 @@
   color: hsl(228, 45%, 44%);
 }
 
-.test {
-  border: 1px solid red;
-}
-
 input:checked ~ .dot {
   transform: translateX(130%);
   background-color: white;
-}
-
-@layer utilities {
-  .custom-gradient-top-border {
-    border-top: 4px solid;
-    border-image: linear-gradient(
-        to right,
-        hsl(37, 97%, 70%),
-        hsl(329, 70%, 58%)
-      )
-      1;
-    border-image-slice: 1;
-    border-radius: 0.375rem 0.375rem 0 0;
-  }
 }
 
 @layer components {

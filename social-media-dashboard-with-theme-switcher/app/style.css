@@ -982,10 +982,6 @@ body{
   color: hsl(228, 45%, 44%);
 }
 
-.test {
-  border: 1px solid red;
-}
-
 input:checked ~ .dot {
   transform: translateX(130%);
   background-color: white;
