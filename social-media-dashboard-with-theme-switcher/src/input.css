@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --LimeGreen: hsl(163, 72%, 41%);
+  --BrightRed: hsl(356, 69%, 56%);
+
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%));
+  --YouTube: hsl(348, 97%, 39%);
+
+  /* #### Dark Theme */
+
+  --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --Toggle: linear gradient #378fe6 to #3eda82;
+
+  /* bg-gradient-to-r from-[#378fe6] via-[#3ed0da] to-[#3eda82] */
+
+  /* #### Light Theme */
+
+  --Toggle: hsl(230, 22%, 74%);
+
+  /* ### Neutral */
+
+  /* #### Dark Theme */
+
+  --VeryDarkBlue: hsl(230, 17%, 14%); /* #### BG */
+  --VeryDarkBlue-top: hsl(232, 19%, 15%); /* #### (Top BG Pattern) */
+  --DarkDesaturatedBlue: hsl(228, 28%, 20%); /* #### (Card BG) */
+  --DesaturatedBlue: hsl(228, 34%, 66%); /* #### (Text) */
+  --White: hsl(0, 0%, 100%); /* #### (Text) */
+
+  /* #### Light Theme */
+
+  --White: hsl(0, 0%, 100%); /* #### BG */
+  --VeryPaleBlue-top: hsl(225, 100%, 98%); /* #### (Top BG Pattern) */
+  --LightGrayishBlue: hsl(227, 47%, 96%); /* #### (Card BG) */
+  --DarkGrayishBlue: hsl(228, 12%, 44%); /* #### (Text) */
+  --VeryDarkBlue: hsl(230, 17%, 14%); /* #### (Text) */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.test {
+  border: 1px solid red;
+}
+
+input:checked ~ .dot {
+  transform: translateX(130%);
+  background-color: white;
+}
+
+@layer utilities {
+  .custom-gradient-top-border {
+    border-top: 4px solid;
+    border-image: linear-gradient(
+        to right,
+        hsl(37, 97%, 70%),
+        hsl(329, 70%, 58%)
+      )
+      1;
+    border-image-slice: 1;
+    border-radius: 0.375rem 0.375rem 0 0;
+  }
+}
+
+@layer components {
+  body {
+    @apply text-[14px] font-[Inter]
+    flex flex-col justify-center items-center m-auto;
+  }
+
+  .header-bg-dark {
+    @apply bg-[var(--VeryDarkBlue-top)] rounded-3xl;
+  }
+
+  .header-bg-white {
+    @apply bg-[var(--VeryPaleBlue-top)] rounded-3xl;
+  }
+
+  .dark {
+    @apply bg-[var(--VeryDarkBlue)] text-[var(--White)];
+  }
+
+  .follower-box,
+  .stats-box {
+    @apply hover:cursor-pointer;
+  }
+
+  .dark-card-bg {
+    @apply bg-[var(--DarkDesaturatedBlue)] hover:brightness-150;
+  }
+
+  .dark p {
+    @apply text-[var(--DesaturatedBlue)];
+  }
+
+  .dark h2 {
+    @apply text-[var(--White)];
+  }
+
+  .white {
+    @apply bg-[var(--White)] text-[var(--VeryDarkBlue)];
+  }
+
+  .white-card-bg {
+    @apply bg-[var(--LightGrayishBlue)] hover:brightness-90;
+  }
+
+  .white p {
+    @apply text-[var(--DarkGrayishBlue)];
+  }
+
+  .white h2 {
+    @apply text-[var(--VeryDarkBlue)];
+  }
+
+  .white h3 {
+    @apply text-[var(--DarkGrayishBlue)];
+  }
+
+  .up {
+    @apply text-[var(--LimeGreen)]  !important;
+  }
+
+  .down {
+    @apply text-[var(--BrightRed)]  !important;
+  }
+
+  /* .dashboard{
+    @apply
+  } */
+}
