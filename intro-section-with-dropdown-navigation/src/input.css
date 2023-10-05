@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Neutral */
+
+  --AlmostWhite: hsl(0, 0%, 98%);
+  --MediumGray: hsl(0, 0%, 41%);
+  --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Epilogue", sans-serif;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+p {
+  font-size: 18px;
+}
+
+@layer components {
+  a {
+    @apply hover:text-[var(--AlmostBlack)];
+  }
+
+  .sub-menu {
+    @apply flex flex-col p-4 px-6 bg-white shadow-2xl rounded-2xl;
+  }
+
+  .sub-menu-mobile {
+    @apply flex flex-col p-2 px-2 bg-white;
+  }
+
+  .one a {
+    @apply w-[150px] flex justify-start items-center gap-4 p-2;
+  }
+
+  .two a {
+    @apply w-[100px] flex justify-start items-center gap-4 p-2;
+  }
+}
