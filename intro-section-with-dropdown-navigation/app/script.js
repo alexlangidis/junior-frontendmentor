@@ -16,10 +16,10 @@ $(document).ready(function () {
     $('.dropdown-mobile').click(function (e) { 
         e.preventDefault();
         $(this).find('#arrow').toggleClass('rotate-180 duration-300');
-        toggleSubMenu(this);
+        toggleSubMenuMobile(this);
     });
     
-    function toggleSubMenu(dropdown) {
+    function toggleSubMenuMobile(dropdown) {
         $(dropdown).find('.sub-menu-mobile').toggleClass('hidden');
     }
 
