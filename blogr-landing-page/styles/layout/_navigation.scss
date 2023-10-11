@@ -138,16 +138,13 @@
                     li{
                         list-style: none;
                         position: relative;
-                        color: white;
-
-
                         
                         a{
                             display: flex;
                             align-items: center;
                             text-decoration: none;
                             font-size: 1.1rem;
-                            
+                            color: white;
                    
                             
                             img{
@@ -156,10 +153,6 @@
     
                             &:hover{
                                 text-decoration: underline;
-                            }
-
-                            &:visited{
-                                color: white;
                             }
           
                         }

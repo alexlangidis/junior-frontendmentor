@@ -231,22 +231,19 @@ header {
   .desktop-menu .desktop-menu-part1 nav ul li {
     list-style: none;
     position: relative;
-    color: white;
   }
   .desktop-menu .desktop-menu-part1 nav ul li a {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-size: 1.1rem;
+    color: white;
   }
   .desktop-menu .desktop-menu-part1 nav ul li a img {
     margin-left: 0.5rem;
   }
   .desktop-menu .desktop-menu-part1 nav ul li a:hover {
     text-decoration: underline;
-  }
-  .desktop-menu .desktop-menu-part1 nav ul li a:visited {
-    color: white;
   }
   .desktop-menu .desktop-menu-part1 nav ul li .connect-expand {
     display: none;
