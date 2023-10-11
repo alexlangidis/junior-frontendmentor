@@ -1,0 +1,26 @@
+// ## Colors
+
+// ### Primary
+
+$Lightred: hsl(356, 100%, 66%);  // (CTA text)
+$Verylightred: hsl(355, 100%, 74%);  //(CTA hover background)
+$Verydarkblue: hsl(208, 49%, 24%);  //(headings)
+
+// ### Neutral
+
+$White: hsl(0, 0%, 100%); //(text)
+$Grayishblue: hsl(240, 2%, 79%); //(footer text)
+$Verydarkgrayishblue: hsl(207, 13%, 34%);   // (body copy)
+$Verydarkblackblue: hsl(240, 10%, 16%); // (footer background)
+
+// ### Gradient
+
+// Background gradient - Intro/CTA mobile nav:
+
+$Verylightred: hsl(13, 100%, 72%);
+$Lightred: hsl(353, 100%, 62%);
+
+// Background gradient - body:
+
+$Verydarkgrayblue: hsl(237, 17%, 21%);
+$Verydarkdesaturatedblue: hsl(237, 23%, 32%);

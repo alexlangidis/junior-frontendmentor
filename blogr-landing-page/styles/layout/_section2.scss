@@ -1,0 +1,77 @@
+.section2{
+    display: flex;
+    flex-direction: row;
+    background-color: $Verydarkgrayblue;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    background-image: url("../images/bg-pattern-circles.svg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+
+    .section2-img{
+        padding: 2rem 0;
+        position: absolute;
+        top: -36%;
+    }
+
+    .section2-text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 14rem;
+        text-align: center;
+        padding: 2rem 0;
+        height: 500px;
+
+        h2{
+            font-family: $font-Overpass;
+            font-weight: 600;
+            font-size: 3rem;
+            max-width: 340px;
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            color: $Grayishblue;
+            max-width: 340px;
+            margin-bottom: 4rem;
+            font-size: 18px;
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .section2{
+        background-position: left bottom;
+
+    
+        .section2-img{
+            left: 5%;
+        }
+    
+        .section2-text{
+            align-items: end;
+            margin: 6rem 10rem 2rem 44rem;
+            text-align: start;
+            width: 100%;
+            padding: 4rem 0;
+            height: 300px;
+    
+            h2{
+                font-size: 2.5rem;
+                max-width: 100%;
+            }
+    
+            p{
+                max-width: 550px;
+            }
+        }
+    }
+}

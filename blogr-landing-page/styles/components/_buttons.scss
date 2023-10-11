@@ -1,0 +1,101 @@
+
+#login-btn-mobile{
+    background-color: transparent;
+    padding: 0.2rem 1.5rem;
+    border: none;
+    color: $Verydarkblue;
+    font-family: $font-Overpass;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+
+#login-btn{
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    font-family: $font-Ubuntu;
+    font-weight: 700;
+    font-size: 1rem;
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+#signUp-btn-mobile{
+    background: linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 70%, hsl(353, 100%, 62%) 100%);
+    padding: 0.7rem 3rem;
+    border: none;
+    border-radius: 50px;
+    color: $White;
+    font-family: $font-Overpass;
+    font-weight: 600;
+    font-size: 1.1rem;
+    width: 60%;
+
+    &:hover{
+        cursor: pointer;
+        color: white;
+        background: linear-gradient(90deg,hsl(353, 100%, 62%) 0%,  hsl(13, 100%, 72%) 50%, hsl(353, 100%, 62%) 100%);;
+    }
+}
+
+#signUp-btn{
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+    border: none;
+    border-radius: 50px;
+    color: $Lightred;
+    font-family: $font-Ubuntu;
+    font-weight: 500;
+    font-size: 1rem;
+
+    &:hover{
+        cursor: pointer;
+        color: white;
+        background-color: $Verylightred;
+    }
+}
+
+
+#stf-btn{
+    background-color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    color: $Lightred;
+    font-family: $font-Ubuntu;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    &:hover{
+        cursor: pointer;
+        color: white;
+        background-color: $Verylightred;
+    }
+}
+
+
+#lm-btn{
+    background-color: transparent;
+    padding: 1rem 1.5rem;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: $White;
+    font-family: $font-Ubuntu;
+    font-weight: 700;
+    font-size: 1.2rem;
+
+    &:hover{
+        cursor: pointer;
+        color: $Lightred;
+        background-color: $White;
+    }
+}

@@ -1,0 +1,50 @@
+header {
+    background-image: url("../images/bg-pattern-intro-mobile.svg"),linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom-left-radius: 100px;
+    color: white;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem;
+
+    h2{
+        font-size: 2.5rem;
+        font-family: $font-Ubuntu;
+        color: white;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        font-size: 1.5rem;
+        font-family: $font-Overpass;
+        font-weight: 300;
+        margin-bottom: 3rem;
+    }
+
+    .hero-buttons{
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 10rem;
+    }
+}
+
+
+@media screen and (min-width:768px) {
+    header {
+        background-image: url("../images/bg-pattern-intro-desktop.svg"), linear-gradient(90deg, hsl(13, 100%, 72%) 0%, hsl(353, 100%, 62%) 50%, hsl(353, 100%, 62%) 100%);
+    }
+    
+}

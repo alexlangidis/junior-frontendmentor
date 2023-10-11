@@ -1,0 +1,126 @@
+.section1-title-desktop{
+    display: none;
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    padding-top: 6rem;
+    padding-bottom: 16rem;
+
+
+
+    .section1-img{
+        padding: 2rem 0;
+    }
+
+    h2{
+        font-family: $font-Overpass;
+        font-weight: 600;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .section1-text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 0rem 2rem;
+
+        h2{
+            font-family: $font-Overpass;
+            font-weight: 600;
+            font-size: 2rem;
+            max-width: 500px;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            color: $Verydarkgrayishblue;
+            max-width: 500px;
+            margin-bottom: 4rem;
+            font-size: 18px;
+        }
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+
+    .section1-title-desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+        margin: 0;
+        font-family: $font-Overpass;
+        font-weight: 600;
+        font-size: 2rem;
+        z-index: -1;
+        background-color: transparent;
+    }
+
+    .section1{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        padding: 6rem 2rem 16rem 2rem;
+        width: 100%;
+        max-width: 1440px;
+        overflow: hidden;
+        position: relative;
+
+        .section1-title-mobile{
+            display: none;
+        }
+    
+        .section1-img{
+            position: absolute;
+            top: 40%;
+            left: 102%;
+            transform: translate(-50%, -45%) scale(0.8);
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+    
+        h2{
+            font-family: $font-Overpass;
+            font-weight: 600;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: start;
+        }
+    
+        .section1-text{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            padding: 0rem;
+            width: 100%;
+            z-index: 99;
+    
+            h2{
+                font-family: $font-Overpass;
+                font-weight: 600;
+                font-size: 2rem;
+                max-width: 500px;
+                margin-bottom: 1rem;
+            }
+    
+            p{
+                color: $Verydarkgrayishblue;
+                max-width: 600px;
+                margin-bottom: 4rem;
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,211 @@
+.mobile-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1240px;
+   margin: auto;
+   position: relative;
+
+
+   .mobile-nav{
+    position: absolute;
+    top: 80%;
+    left: 1.4rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    width: 90%;
+    height: max-content;
+    border-radius: 10px;
+    color: black;
+    box-shadow: -1px 1px 19px 5px rgba(0,0,0,0.25);
+
+    .mobile-menu-part1{
+
+
+        nav{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+            width: 100%;
+         
+
+             ul{
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 0;
+ 
+
+                li{
+                    list-style: none;
+                    
+                    
+                    a{
+                        display: flex;
+                        align-items: center;
+                        text-decoration: none;
+                        font-size: 1.1rem;
+                        color: $Verydarkblue;
+                        
+                        
+                        img{
+                            margin-left: 0.5rem;
+                        }
+
+                        &:hover{
+                            font-weight: bold;
+                        }
+                    }
+
+                    .connect-expand-mobile{
+                        display: none;
+                    }
+                    .connect-expand-mobile.active{
+                        display: block;
+                        background-color: rgb(224, 224, 224);
+                        color: $Verydarkblue;
+                        padding: 1rem 4rem;
+                        margin-top: 1rem;
+                        border-radius: 5px;
+
+                        a{
+                            padding: 0.4rem;
+                            text-decoration: none;
+
+                            &:hover{
+                                font-weight: bold;
+                            }
+
+                 
+                        }
+                    }
+
+                    .arrow{
+                        transform: rotate(180deg);
+                        transition: 0.5s;
+                    }
+                }   
+             }
+        }
+    }
+    .mobile-menu-part2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.8rem;
+        margin-top: 2rem;
+        border-top: 1px solid gray;
+        width: 100%;
+    }
+   }
+}
+
+.desktop-menu{
+    display: none;
+}
+
+
+@media screen and (min-width:768px) {
+
+    .mobile-menu{
+        display: none;
+    }
+
+    .desktop-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 2rem;
+        max-width: 1240px;
+        margin: auto;
+    
+        .desktop-menu-part1{
+            display: flex;
+            align-items: center;
+    
+            nav{
+                 ul{
+                    display: flex;
+                    gap: 2rem;
+    
+                    li{
+                        list-style: none;
+                        position: relative;
+                        color: white;
+
+
+                        
+                        a{
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            font-size: 1.1rem;
+                            
+                   
+                            
+                            img{
+                                margin-left: 0.5rem;
+                            }
+    
+                            &:hover{
+                                text-decoration: underline;
+                            }
+
+                            &:visited{
+                                color: white;
+                            }
+          
+                        }
+
+                        .connect-expand{
+                            display: none;
+                        }
+                        .connect-expand.active{
+                            display: block;
+                            position: absolute;
+                            top: 40px;
+                            width: max-content;
+                            background-color: white;
+                            color: $Verydarkblue;
+                            padding: 1rem 2rem;
+                            border-radius: 10px;
+                            box-shadow: -1px 1px 19px 5px rgba(0,0,0,0.25);
+
+
+                            a{
+                                padding: 0.4rem;
+                                text-decoration: none;
+
+                                &:hover{
+                                    font-weight: bold;
+                                }
+
+                                &:visited{
+                                    color: $Verydarkblue;
+                                }
+                            }
+                        }
+
+                        .arrow{
+                            transform: rotate(180deg);
+                            transition: 0.5s;
+                        }
+                    }   
+                 }
+            }
+        }
+    
+        .desktop-menu-part2{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
+

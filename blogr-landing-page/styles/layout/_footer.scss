@@ -1,0 +1,111 @@
+footer{
+    background-color: $Verydarkblackblue;
+    margin: auto;
+    border-top-right-radius: 100px;
+    padding-bottom: 2rem;
+
+
+    .footer-content{
+        padding-top: 2rem;
+        width: 100%;
+        max-width: 1240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: auto;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    img{
+        margin: 4rem 0;
+    }
+
+    h3{
+        color: white;
+        margin-bottom: 1rem;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        ul{
+           padding: 0;
+
+           li{
+               list-style: none;
+               color: $Grayishblue;
+               padding: 0.2rem;
+             
+               
+               a{
+                   align-items: center;
+                   text-decoration: none;
+                   
+                   font-size: 1.1rem;
+
+
+                   &:hover{
+                       text-decoration: underline;
+                   }
+               }
+           }
+        }
+   }
+}
+
+
+@media screen and (min-width:768px) {
+
+    footer{
+    
+        .footer-content{
+            padding-top: 6rem;
+            width: 100%;
+            max-width: 1240px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            align-items: start;
+            text-align: start;
+        }
+        img{
+            margin: 0 0;
+        }
+    
+        h3{
+            color: white;
+            margin-bottom: 1rem;
+        }
+    
+        nav{
+            display: flex;
+            flex-direction: column;
+            ul{
+               padding: 0;
+    
+               li{
+                   list-style: none;
+                   color: $Grayishblue;
+                   padding: 0.2rem;
+                 
+                   
+                   a{
+                       align-items: center;
+                       text-decoration: none;
+                       
+                       font-size: 1.1rem;
+    
+    
+                       &:hover{
+                           text-decoration: underline;
+                       }
+                   }
+               }
+            }
+       }
+    }
+    
+}
