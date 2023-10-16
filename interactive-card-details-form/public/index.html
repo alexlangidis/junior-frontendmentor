@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../src/script.js" defer></script>
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body
+    class="flex flex-col w-full h-screen justify-center items-center m-auto"
+  >
+    <!-- Background and Cards-->
+
+    <div
+      class="container w-full max-w-full flex flex-col justify-center items-center lg:grid lg:grid-cols-2 lg:grid-rows-1"
+    >
+      <div
+        class="background w-full h-[320px] bg-[url('../images/bg-main-mobile.png')] bg-no-repeat bg-cover lg:bg-[url('../images/bg-main-desktop.png')] lg:bg-contain lg:h-screen relative"
+      >
+        <div
+          class="cards absolute top-[45%] left-[30%] md:top-[20%] md:left-[25%] lg:top-[20%] lg:left-[30%] flex flex-col-reverse lg:flex-col lg:gap-8"
+        >
+          <!-- Front Card-->
+          <div
+            class="front-card relative translate-x-[-25%] translate-y-[-55%] lg:translate-x-[-10%] lg:translate-y-0 z-10"
+          >
+            <img
+              src="../images/bg-card-front.png"
+              alt="img"
+              class="max-w-[280px] md:max-w-[400px] lg:max-w-[380px] xl:max-w-full"
+            />
+            <div class="card_container">
+              <img
+                src="../images/card-logo.svg"
+                alt="logo"
+                class="absolute top-4 left-4 max-w-[30px] md:max-w-[60px] xl:max-w-full"
+              />
+              <h2
+                class="text-[1rem] text-white tracking-[2px] absolute bottom-12 left-4 md:text-[1.5rem] md:bottom-16 lg:bottom-16 xl:text-[1.8rem] xl:bottom-20"
+                id="number"
+              >
+                0000 0000 0000 0000
+              </h2>
+              <div
+                class="name-info flex justify-between items-center absolute text-[14px] bottom-4 left-4 right-6 text-white md:text-[18px] md:bottom-6 xl:bottom-8"
+              >
+                <span id="name">Jane Appleseed</span>
+                <span id="date">
+                  <span id="month">00</span>
+                  /
+                  <span id="year">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- Back Card-->
+          <div class="back-card relative">
+            <img
+              src="../images/bg-card-back.png"
+              alt="img"
+              class="max-w-[280px] md:max-w-[400px] lg:max-w-[380px] xl:max-w-full"
+            />
+            <span
+              id="cvc"
+              class="text-white absolute text-[16px] top-[4rem] right-8 md:text-[18px] md:top-[5.8rem] md:right-12 lg:top-[5.5rem] lg:right-14 xl:top-[6.7rem] xl:right-14"
+              >000</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Cards Details-->
+      <div
+        class="card__container flex flex-col w-[450px] justify-center items-start mt-20 p-8 uppercase text-[var(--Verydarkviolet)] md:w-[550px] lg:w-[500px] lg:ml-14 lg:pr-14"
+      >
+        <form action="#" method="post">
+          <div class="card__name w-full flex flex-col">
+            <label for="card-name">Cardholder Name</label>
+            <input
+              type="text"
+              placeholder="e.g. Jane Appleseed"
+              class="w-full max-w-md"
+              id="card-name"
+              pattern="[a-zA-Z\s]+"
+              required
+            />
+            <span class="errorMessage"></span>
+          </div>
+
+          <div class="card__number w-full flex flex-col">
+            <label for="card-number">Card Number</label>
+            <input
+              type="number"
+              placeholder="e.g. 1234 5678 9123 0000"
+              class="w-full max-w-md"
+              id="card-number"
+              required
+              minlength="16"
+              maxlength="16"
+            />
+          </div>
+
+          <div class="card__exp__date flex gap-4">
+            <div class="flex flex-col">
+              <label for="card-date">Exp. Date (MM/YY)</label>
+              <div class="flex gap-2">
+                <input
+                  type="number"
+                  placeholder="MM"
+                  class="w-full min-w-[80px]"
+                  id="card-month"
+                  required
+                  minlength="2"
+                  maxlength="2"
+                />
+                <input
+                  type="number"
+                  placeholder="YY"
+                  class="w-full min-w-[80px]"
+                  id="card-year"
+                  required
+                  minlength="2"
+                  maxlength="2"
+                />
+              </div>
+              <span class="errorMessage"></span>
+            </div>
+
+            <div class="flex flex-col">
+              <label for="cvc">CVC</label>
+              <input
+                type="number"
+                placeholder=" e.g. 123"
+                class="w-full min-w-[200px]"
+                name="cvc"
+                id="card-cvc"
+                required
+                minlength="3"
+                maxlength="3"
+              />
+              <span class="errorMessage"></span>
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn w-full p-2 mt-12 bg-[var(--Verydarkviolet)] text-white rounded-xl text-[26px] md:p-4"
+            id="submit_btn"
+          >
+            Confirm
+          </button>
+        </form>
+
+        <div
+          class="thanks flex flex-col justify-center items-center m-auto hidden"
+        >
+          <img src="../images/icon-complete.svg" alt="icon" />
+          <h2 class="uppercase text-[2rem] text-[var(--Verydarkviolet)] my-4">
+            Thank you!
+          </h2>
+          <p class="text-[var(--Darkgrayishviolet)]">
+            We've added your card details
+          </p>
+          <button
+            class="continue btn w-full p-2 mt-12 bg-[var(--Verydarkviolet)] text-white rounded-xl text-[26px] md:p-4"
+          >
+            Continue
+          </button>
+        </div>
+
+        <div
+          class="attribution flex w-full justify-center items-center mt-2 normal-case"
+        >
+          Challenge by &nbsp;
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor</a
+          >. Coded by &nbsp;
+          <a href="https://www.frontendmentor.io/profile/alexlangidis">
+            AlexLang-Dev</a
+          >.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

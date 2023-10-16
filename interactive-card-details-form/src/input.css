@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --Lineargradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%); /*((active input border))*/
+  --Red: hsl(0, 100%, 66%); /*(input errors)*/
+
+  /*   ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Lightgrayishviolet: hsl(270, 3%, 87%);
+  --Darkgrayishviolet: hsl(279, 6%, 55%);
+  --Verydarkviolet: hsl(278, 68%, 11%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.test {
+  border: 1px solid red;
+}
+.test1 {
+  border: 2px solid green;
+}
+
+.test2 {
+  border: 2px solid greenyellow;
+}
+
+/* Remove number input arrows */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  html {
+    font-family: "Space Grotesk";
+  }
+}
+
+@layer components {
+  body {
+    @apply text-[18px];
+  }
+
+  label {
+    @apply mb-2 mt-6;
+  }
+
+  input {
+    @apply text-[var(--Lineargradient)] border-[1px] outline-[1px] outline-[var(--Lineargradient)] rounded-lg w-full p-2 pl-4;
+  }
+
+  input:invalid {
+    @apply text-[var(--Lineargradient)] border-[2px] outline-[1px] rounded-lg w-full p-2 pl-4;
+  }
+
+  input::placeholder {
+    @apply text-[var(--Darkgrayishviolet)];
+  }
+
+  .errorMessage {
+    @apply text-[var(--Red)] normal-case text-[14px] p-1;
+  }
+}
