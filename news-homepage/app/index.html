@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../app/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../app/script.js" defer></script>
+
+    <title>Frontend Mentor | News homepage</title>
+  </head>
+  <body>
+    <div
+      class="container flex flex-col justify-center items-center m-auto w-full px-4 md:max-w-full lg:max-w-[1440px]"
+    >
+      <!-- Header Navigation-->
+      <header class="flex justify-between items-center w-full py-10 md:pt-20">
+        <div class="logo">
+          <img src="../assets/images/logo.svg" alt="logo" />
+        </div>
+        <div class="menu-ham relative">
+          <!-- Mobile menu-->
+          <img
+            src="../assets/images/icon-menu.svg"
+            alt="menu"
+            class="md:hidden"
+          />
+          <!-- Desktop menu-->
+          <nav>
+            <ul class="md:flex gap-8 hidden">
+              <li class="hover:text-[var(--Softred)]"><a href="#">Home</a></li>
+              <li class="hover:text-[var(--Softred)]"><a href="#">New</a></li>
+              <li class="hover:text-[var(--Softred)]">
+                <a href="#">Popular</a>
+              </li>
+              <li class="hover:text-[var(--Softred)]">
+                <a href="#">Trending</a>
+              </li>
+              <li class="hover:text-[var(--Softred)]">
+                <a href="#">Categories</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Mobile sidebar menu-->
+        <div
+          class="menu-sidebar grid-cols-3 w-full h-full max-w-full absolute top-0 right-0 md:hidden hidden animate__animated"
+        >
+          <div class="div col-start-1 col-end-2 bg-black opacity-40"></div>
+          <div class="bg-white col-start-2 col-end-4">
+            <img
+              src="../assets/images/icon-menu-close.svg"
+              alt="menu"
+              class="menu-close absolute top-10 right-8"
+            />
+            <nav
+              class="flex flex-col justify-center items-start px-8 pt-40 m-auto"
+            >
+              <ul class="text-[1.5rem]">
+                <li class="my-6 hover:text-[var(--Softred)]">
+                  <a href="#">Home</a>
+                </li>
+                <li class="my-6 hover:text-[var(--Softred)]">
+                  <a href="#">New</a>
+                </li>
+                <li class="my-6 hover:text-[var(--Softred)]">
+                  <a href="#">Popular</a>
+                </li>
+                <li class="my-6 hover:text-[var(--Softred)]">
+                  <a href="#">Trending</a>
+                </li>
+                <li class="my-6 hover:text-[var(--Softred)]">
+                  <a href="#">Categories</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main>
+        <div class="main__content grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="box md:col-start-1 md:col-end-3">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/images/image-web-3-desktop.jpg"
+              />
+              <img
+                src="../assets/images/image-web-3-mobile.jpg"
+                alt="banner"
+                class="w-full"
+              />
+            </picture>
+            <div class="div grid">
+              <div class="box1 my-10 md:mr-4 lg:col-start-1 lg:col-end-2">
+                <h1
+                  class="text-[4rem] text-[var(--Verydarkblue)] font-extrabold leading-tight"
+                >
+                  The Bright Future of Web 3.0?
+                </h1>
+              </div>
+              <div class="box2 lg:col-start-2 lg:col-end-3 lg:mt-10">
+                <p class="text-[1.2rem] text-[var(--Darkgrayishblue)]">
+                  We dive into the next evolution of the web that claims to put
+                  the power of the platforms back into the hands of the people.
+                  But is it really fulfilling its promise?
+                </p>
+                <button
+                  class="bg-[var(--Softred)] text-[1.2rem] text-white uppercase py-4 px-8 mt-8 mb-12 hover:bg-[var(--Verydarkblue)]"
+                >
+                  Read more
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="box3 bg-[var(--Verydarkblue)] p-6 md:col-start-3 md:col-end-4 md:row-start-1"
+          >
+            <h2
+              class="text-[var(--Softorange)] text-[3rem] md:text-[2rem] lg:text-[3rem] font-bold mb-8"
+            >
+              New
+            </h2>
+            <div class="article">
+              <h2
+                class="text-[var(--Off-white)] text-[1.75rem] md:text-[1.4rem] lg:text-[1.75rem] font-bold hover:text-[var(--Softorange)] cursor-pointer"
+              >
+                Hydrogen VS Electric Cars
+              </h2>
+              <p
+                class="text-[var(--Grayishblue)] text-[1.2rem] md:text-[1rem] lg:text-[1.2rem] mt-4 mb-8"
+              >
+                Will hydrogen-fueled cars ever catch up to EVs?
+              </p>
+              <div
+                class="border-[var(--Darkgrayishblue)] border-b-[1px] my-8"
+              ></div>
+            </div>
+            <div class="article divide-solid">
+              <h2
+                class="text-[var(--Off-white)] text-[1.75rem] md:text-[1.4rem] lg:text-[1.75rem] font-bold hover:text-[var(--Softorange)] cursor-pointer"
+              >
+                The Downsides of AI Artistry
+              </h2>
+              <p
+                class="text-[var(--Grayishblue)] text-[1.2rem] md:text-[1rem] lg:text-[1.2rem] mt-4 mb-8"
+              >
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+              <div
+                class="border-[var(--Darkgrayishblue)] border-b-[1px] my-8"
+              ></div>
+            </div>
+            <div class="article">
+              <h2
+                class="text-[var(--Off-white)] text-[1.75rem] md:text-[1.4rem] lg:text-[1.75rem] font-bold hover:text-[var(--Softorange)] cursor-pointer"
+              >
+                Is VC Funding Drying Up?
+              </h2>
+              <p
+                class="text-[var(--Grayishblue)] text-[1.2rem] md:text-[1rem] lg:text-[1.2rem] mt-4 mb-8"
+              >
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!--Content Part 2-->
+
+        <div
+          class="secondery__content mt-20 grid grid-cols-1 grid-rows-3 gap-8 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1"
+        >
+          <div class="blog__post flex justify-start items-center gap-8">
+            <div class="blog__post_img">
+              <img
+                src="../assets/images/image-retro-pcs.jpg"
+                alt="image-retro-pcs"
+                class="w-full min-w-[150px] max-w-[150px]"
+              />
+            </div>
+
+            <div
+              class="blog__post__text flex flex-col justify-start items-start h-full"
+            >
+              <h2 class="text-[var(--Grayishblue)] text-[3rem] font-bold">
+                01
+              </h2>
+              <h3
+                class="text-[var(--Verydarkblue)] text-[1.5rem] font-extrabold my-4 hover:text-[var(--Softred)] cursor-pointer"
+              >
+                Reviving Retro PCs
+              </h3>
+              <p
+                class="text-[var(--Darkgrayishblue)] text-[1.2rem] leading-relaxed"
+              >
+                What happens when old PCs are given modern upgrades?
+              </p>
+            </div>
+          </div>
+
+          <div class="blog__post flex justify-start items-center gap-8">
+            <div class="blog__post_img">
+              <img
+                src="../assets/images/image-top-laptops.jpg"
+                alt="image-top-laptops"
+                class="w-full min-w-[150px] max-w-[150px]"
+              />
+            </div>
+
+            <div
+              class="blog__post__text flex flex-col justify-start items-start h-full"
+            >
+              <h2 class="text-[var(--Grayishblue)] text-[3rem] font-bold">
+                02
+              </h2>
+              <h3
+                class="text-[var(--Verydarkblue)] text-[1.5rem] font-extrabold my-4 hover:text-[var(--Softred)] cursor-pointer"
+              >
+                Top 10 Laptops of 2022
+              </h3>
+              <p
+                class="text-[var(--Darkgrayishblue)] text-[1.2rem] leading-relaxed"
+              >
+                Our best picks for various needs and budgets.
+              </p>
+            </div>
+          </div>
+
+          <div class="blog__post flex justify-start items-center gap-8">
+            <div class="blog__post_img">
+              <img
+                src="../assets/images/image-gaming-growth.jpg"
+                alt="image-gaming-growth"
+                class="w-full min-w-[150px] max-w-[150px]"
+              />
+            </div>
+
+            <div
+              class="blog__post__text flex flex-col justify-start items-start h-full"
+            >
+              <h2 class="text-[var(--Grayishblue)] text-[3rem] font-bold">
+                03
+              </h2>
+              <h3
+                class="text-[var(--Verydarkblue)] text-[1.5rem] font-extrabold my-4 hover:text-[var(--Softred)] cursor-pointer"
+              >
+                The Growth of Gaming
+              </h3>
+              <p
+                class="text-[var(--Darkgrayishblue)] text-[1.2rem] leading-relaxed"
+              >
+                How the pandemic has sparked fresh opportunities.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="attribution my-10">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alexlangidis"
+        >AlexLang-Dev</a
+      >.
+    </div>
+  </body>
+</html>
