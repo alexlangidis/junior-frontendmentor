@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../src/script.js" defer></script>
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(199, 100%, 22%);
+      }
+    </style>
+  </head>
+  <body class="flex flex-col justify-center items-center m-auto w-full">
+    <div
+      class="outer-bg-container bg-[url('../images/bg-pattern.svg')] bg-cover bg-no-repeat bg-left-top relative h-full w-full min-h-[600px] flex flex-col justify-center items-center m-auto"
+    >
+      <div
+        class="inner-container text-center bg-[url('../images/pattern-circles.svg')] bg-contain bg-no-repeat bg-center h-[150px] w-full flex flex-col justify-center items-center mt-[-300px]"
+      >
+        <h2 class="text-[1.8rem] text-[var(--DarkDesaturatedBlue)] font-bold">
+          Simple, traffic-based pricing
+        </h2>
+        <p class="text-[var(--GrayishBlue)] w-[200px] md:w-full">
+          Sign-up for our 30-day trial. No credit card required.
+        </p>
+      </div>
+    </div>
+
+    <div
+      class="div flex flex-col justify-center items-center absolute top-[30%] shadow-2xl max-w-[400px] md:max-w-[600px] bg-white rounded-lg"
+    >
+      <div
+        class="main-content-container flex flex-col justify-center items-center w-full p-8"
+      >
+        <div
+          class="pageviews-pricing flex justify-center items-center w-full md:justify-between"
+        >
+          <span
+            class="pageViews uppercase tracking-widest text-[var(--GrayishBlue)]"
+            >100k Pageviews</span
+          >
+          <h2
+            class="priceFixed items-center text-[2rem] text-[var(--DarkDesaturatedBlue)] font-bold hidden md:flex"
+          >
+            $16.00&nbsp;
+            <span class="text-[1rem] text-[var(--GrayishBlue)] font-light">
+              / month</span
+            >
+          </h2>
+        </div>
+
+        <input
+          type="range"
+          name="price-slider"
+          id="price-slider"
+          min="0"
+          max="4"
+          value="2"
+          step="1"
+          class="my-8 w-full range"
+        />
+
+        <h2
+          class="priceFixed flex items-center text-[2rem] text-[var(--DarkDesaturatedBlue)] font-bold mb-8 md:hidden"
+        >
+          $16.00&nbsp;
+          <span
+            class="duration text-[1rem] text-[var(--GrayishBlue)] font-light"
+          >
+            / month</span
+          >
+        </h2>
+
+        <div
+          class="toggle-year w-full flex justify-center items-center text-[var(--GrayishBlue)]"
+        >
+          <p>Monthly Billing</p>
+          <label for="switch" class="switch mx-4">
+            <input
+              type="checkbox"
+              name="switch"
+              id="switch"
+              class="myCheckBox"
+            />
+            <span class="slider round"></span>
+          </label>
+          <p>
+            Yearly Billing
+            <span
+              class="md:hidden bg-orange-100 rounded-full text-orange-600 py-1 px-2 font-bold"
+              >-25%</span
+            >
+            <span
+              class="hidden md:inline-block bg-orange-100 rounded-full text-orange-600 py-1 px-2 font-bold"
+              >25% discount</span
+            >
+          </p>
+        </div>
+      </div>
+      <div
+        class="features-trial flex flex-col justify-center items-center text-center gap-10 border-t-2 w-full md:flex-row md:justify-around md:text-left px-8 pb-8"
+      >
+        <div class="features mt-10">
+          <ul
+            class="list-image-[url(../images/icon-check.svg)] text-[var(--GrayishBlue)]"
+          >
+            <li class="py-2">Unlimited websites</li>
+            <li class="py-2">100% data ownership</li>
+            <li class="py-2">Email reports</li>
+          </ul>
+        </div>
+        <div
+          class="trial bg-[var(--DarkDesaturatedBlue)] text-[var(--PaleBlue)] rounded-full py-4 px-10 hover:text-white"
+        >
+          <button>Start my trial</button>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.frontendmentor.io/profile/alexlangidis"
+          >AlexLang-Dev</a
+        >.
+      </div>
+    </div>
+  </body>
+</html>
