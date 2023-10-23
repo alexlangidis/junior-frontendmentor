@@ -36,6 +36,7 @@
 body {
   font-family: "Manrope", sans-serif;
   font-size: 15px;
+  transition: all 0.5s ease-in-out;
 }
 
 .switch {
@@ -122,5 +123,5 @@ input:checked + .slider:before {
   background-color: var(--StrongCyan);
   border-radius: 50%;
   cursor: pointer;
-  transition: background 0.1s ease;
+  transition: background 0.1s ease-in-out;
 }

@@ -76,6 +76,7 @@ $(document).ready(function () {
           var value = parseInt($(this).val());
           var percentage = (value * 25);
           $(this).css('background', 'linear-gradient(to right, var(--SoftCyan), var(--SoftCyan) ' + percentage + '%,  var(--VeryPaleBlue) ' + percentage + '%,  var(--VeryPaleBlue) 100%)');
+          
         });
       }
     
