@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../src/script.js" defer></script>
+
+    <title>Frontend Mentor | Age calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col w-full justify-center items-center m-auto h-screen"
+  >
+    <div
+      class="container bg-white w-full max-w-[400px] p-6 m-8 flex flex-col justify-center items-center rounded-xl rounded-br-[4rem] md:max-w-[600px] md:p-8 md:rounded-br-[6rem]"
+    >
+      <div
+        class="container-inputs flex justify-start items-center gap-4 w-full max-w-[400px] my-10 md:max-w-[600px]"
+      >
+        <div class="input-element flex flex-col">
+          <h3 class="date-h3-text" id="day-text">DAY</h3>
+          <input
+            type="number"
+            name="day"
+            id="day"
+            min="1"
+            max="31"
+            minlength="2"
+            maxlength="2"
+            placeholder="DD"
+            class="border-focus"
+          />
+          <span
+            class="text-[var(--Lightred)] text-[12px] italic mt-3 day-error hidden"
+            >Must be a valid day</span
+          >
+        </div>
+        <div class="input-element flex flex-col">
+          <h3 class="date-h3-text" id="month-text">MONTH</h3>
+          <input
+            type="number"
+            name="month"
+            id="month"
+            min="1"
+            max="12"
+            minlength="2"
+            maxlength="2"
+            placeholder="MM"
+            class="border-focus"
+          />
+          <span
+            class="text-[var(--Lightred)] text-[12px] italic mt-3 hidden month-error"
+            >Must be a valid month</span
+          >
+        </div>
+        <div class="input-element flex flex-col">
+          <h3 class="date-h3-text" id="year-text">YEAR</h3>
+          <input
+            type="number"
+            name="year"
+            id="year"
+            min="1900"
+            max="2099"
+            minlength="4"
+            maxlength="4"
+            placeholder="YYYY"
+            class="border-focus"
+          />
+          <span
+            class="text-[var(--Lightred)] text-[12px] italic mt-3 hidden year-error"
+            >Must be above 1900 and current year</span
+          >
+        </div>
+      </div>
+      <div
+        class="border-[var(--Offwhite)] border-[1px] w-full mt-8 relative md:mt-2"
+      >
+        <div
+          class="arrow w-[50px] h-[50px] bg-[var(--Purple)] rounded-full p-3 absolute top-0 left-[45%] translate-y-[-25px] md:left-[85%] md:translate-y-[-40px] md:w-[80px] md:h-[80px] md:p-5 hover:bg-[var(--Offblack)] cursor-pointer"
+        >
+          <img
+            src="../assets/images/icon-arrow.svg"
+            alt="arrow"
+            class="w-full h-full"
+          />
+        </div>
+      </div>
+      <div
+        class="result mt-10 flex flex-col justify-start w-full leading-[3.5rem]"
+      >
+        <h2 class="text-[3rem] font-[800] italic">
+          <span class="text-[var(--Purple)]" id="years-dif">--</span> years
+        </h2>
+        <h2 class="text-[3rem] font-[800] italic">
+          <span class="text-[var(--Purple)]" id="months-dif">--</span> months
+        </h2>
+        <h2 class="text-[3rem] font-[800] italic">
+          <span class="text-[var(--Purple)]" id="days-dif">--</span> days
+        </h2>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alexlangidis"
+        >AlexLang-Dev</a
+      >.
+    </div>
+  </body>
+</html>

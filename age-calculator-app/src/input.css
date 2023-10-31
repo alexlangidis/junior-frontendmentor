@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ### Primary */
+
+  --Purple: hsl(259, 100%, 65%);
+  --Lightred: hsl(0, 100%, 67%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Offwhite: hsl(0, 0%, 94%);
+  --Lightgrey: hsl(0, 0%, 86%);
+  --Smokeygrey: hsl(0, 1%, 44%);
+  --Offblack: hsl(0, 0%, 8%);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+.test {
+  border: 1px solid red;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 32px;
+  background-color: var(--Offwhite);
+}
+
+@layer components {
+  .date-h3-text {
+    @apply text-[0.9rem] font-bold text-[var(--Smokeygrey)] tracking-widest;
+  }
+
+  .date-h3-text-error {
+    @apply text-[0.9rem] font-bold text-[var(--Lightred)] tracking-widest;
+  }
+
+  .border-focus {
+    @apply border-[var(--Lightgrey)] border-[1px] w-full max-w-[100px] rounded-lg px-4 py-2 outline-1 outline-[var(--Purple)]  font-bold text-[1.5rem] md:max-w-[120px] md:text-[1.8rem];
+  }
+
+  .border-focus-error {
+    @apply border-[var(--Lightred)] border-[1px] w-full max-w-[100px] rounded-lg px-4 py-2 outline-1 outline-red-600  font-bold text-[1.5rem] md:max-w-[120px] md:text-[1.8rem];
+  }
+}
