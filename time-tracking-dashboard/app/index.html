@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="../src/style.css" />
+    <script src="../src/script.js" defer></script>
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div
+      class="main-container w-full grid grid-cols-1 gap-8 px-[2rem] mt-20 md:grid-cols-2 md:grid-rows-3 md:mb-60 xl:grid-cols-4 xl:grid-rows-2 xl:max-w-[1440px] xl:mb-20"
+    >
+      <!--Start User Card-->
+      <div
+        class="user-card flex flex-col w-full md:max-w-[500px] row-start-1 row-end-3"
+      >
+        <div class="bg-[var(--Blue)] rounded-t-2xl rounded-b-2xl p-8 z-10">
+          <div
+            class="flex justify-center items-center md:flex-col md:justify-start md:items-start md:mb-20 xl:mb-12"
+          >
+            <img
+              src="../images/image-jeremy.png"
+              alt="avatar"
+              class="w-[100px] h-[100px] border-4 border-white rounded-full md:mb-10"
+            />
+            <div class="user-text ml-8 md:ml-0">
+              <p class="text-[var(--PaleBlue)]">Report for</p>
+              <h2
+                class="text-white text-[1.7rem] font-[300] md:text-[2.5rem] md:max-w-[200px]"
+              >
+                Jeremy Robson
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="period bg-[var(--Darkblue)] flex justify-around items-center rounded-b-2xl text-[var(--Desaturatedblue)] p-8 py-8 mt-[-5px] md:flex-col md:items-start md:gap-4"
+        >
+          <button
+            class="activity-tracker-option hover:text-white"
+            data-option="daily"
+          >
+            Daily
+          </button>
+          <button
+            class="activity-tracker-option hover:text-white active"
+            data-option="weekly"
+          >
+            Weekly
+          </button>
+          <button
+            class="activity-tracker-option hover:text-white"
+            data-option="monthly"
+          >
+            Monthly
+          </button>
+        </div>
+      </div>
+      <!--End User Card-->
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>

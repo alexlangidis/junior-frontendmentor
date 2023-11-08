@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ### Body Copy
+
+- Font size: 18px (card titles e.g. Work, Play)
+
+### Font
+
+- Family: [Rubik](https://fonts.google.com/specimen/Rubik)
+- Weights: 300, 400, 500 
+
+*/
+
+:root {
+  /* ### Primary */
+
+  --Blue: hsl(246, 80%, 60%);
+  --Lightorange: hsl(15, 100%, 70%); /* (work) */
+  --Softblue: hsl(195, 74%, 62%); /* (play) */
+  --Lightred: hsl(348, 100%, 68%); /* (study) */
+  --Limegreen: hsl(145, 58%, 55%); /* (exercise) */
+  --Violet: hsl(264, 64%, 52%); /* (social) */
+  --Softorange: hsl(43, 84%, 65%); /* (self care)*/
+
+  /* ### Neutral */
+
+  --Verydarkblue: hsl(226, 43%, 10%);
+  --Darkblue: hsl(235, 46%, 20%);
+  --Desaturatedblue: hsl(235, 45%, 61%);
+  --PaleBlue: hsl(236, 100%, 87%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.test {
+  border: 1px solid red;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  background: var(--Verydarkblue);
+}
+
+@layer components {
+  .active {
+    @apply text-white;
+  }
+
+  #work {
+    @apply bg-[var(--Lightorange)];
+  }
+
+  #play {
+    @apply bg-[var(--Softblue)];
+  }
+
+  #study {
+    @apply bg-[var(--Lightred)];
+  }
+
+  #exercise {
+    @apply bg-[var(--Limegreen)];
+  }
+
+  #social {
+    @apply bg-[var(--Violet)];
+  }
+
+  #self-care {
+    @apply bg-[var(--Softorange)];
+  }
+
+  .card {
+    @apply w-full md:max-w-[500px] md:max-h-[100px] xl:max-w-[400px] hover:brightness-125 cursor-pointer;
+  }
+
+  .card-part1 {
+    @apply rounded-b-2xl rounded-t-2xl mb-[-25px] h-20;
+  }
+
+  .card-bg-img {
+    @apply bg-no-repeat bg-[right] h-20 bg-contain mr-8;
+  }
+
+  .card-part2 {
+    @apply flex flex-col bg-[var(--Darkblue)] rounded-b-2xl rounded-t-2xl p-8;
+  }
+
+  .card-part2-hours {
+    @apply text-white flex justify-between items-center;
+  }
+
+  .card-part2-hours img {
+    @apply hover:fill-purple-400;
+  }
+
+  .card-part2-period {
+    @apply flex justify-between items-center md:my-6 xl:flex-col xl:items-start xl:my-0 xl:mt-6;
+  }
+
+  .card-part2-period-text {
+    @apply text-[1.3rem] text-[var(--PaleBlue)] font-[400] md:text-[1rem];
+  }
+}
