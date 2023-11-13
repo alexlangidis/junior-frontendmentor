@@ -1,0 +1,260 @@
+.modal__project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 10px 30px 30px rgba(0,0,0,0.51);
+
+
+    p{
+        color: $Darkgray;
+    }
+
+
+    .modal__project__head{
+        margin-top: 2rem;
+        text-align: left;
+        
+        h2{
+            padding: 0;
+            margin: 0;
+            margin-bottom: 1rem;
+        }
+
+        p{
+            margin-bottom: 2rem;
+        }
+    }
+
+    .selection__column{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        border: 1px solid gray;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        text-align: left;
+
+
+
+        p{
+            margin-top: 1.5rem;
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .selection__column.active{
+        border: 0;
+        outline: 2px solid $Moderatecyan;
+    }
+
+    .selection{
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    .selection__title{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+
+        input{
+            margin-right: 1rem;
+        }
+            
+        label{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
+            font-weight: 700;
+
+            &:hover{
+                color: $Moderatecyan;
+                cursor: pointer;
+            }
+            &:active{
+                color: $Moderatecyan;
+            }
+            }
+
+            span{
+                margin-top: 0.5rem;
+                margin-left: 0rem;
+                color: $Moderatecyan;
+                font-weight: 500;
+            }
+
+
+    }
+
+    .stock-mobile{
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-top: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+
+        p{
+            margin-top: 0;
+            margin-left: 1rem;
+            margin-bottom: 0;
+        }
+    }
+
+    .stock-desktop{
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        h4{
+            font-size: 1.5rem
+        }
+
+        h5{
+            margin: 0;
+            margin-left: 1rem;
+            color: $Darkgray;
+        }
+    }
+
+    .pledge{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 1px solid grey;
+
+
+        .amount{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 1rem;
+
+            input{
+                border-radius: 50px;
+                padding: 1rem;
+                border: 1px solid gray;
+                max-width: 120px;
+                font-weight: 700;
+                margin-right: 1.5rem;
+                text-align: center;
+            
+            &:focus{
+                border: 0;
+                outline: 2px solid $Moderatecyan;
+            }
+            }
+        }
+    }
+
+    .pledge.active{
+        display: flex;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #closeModal{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+.modal__project{
+
+    width: 100%;
+    max-width: 700px;
+
+
+    .selection__title{
+        display: flex;
+        align-items: center;
+        color: black;
+
+        input{
+            margin-right: 1rem;
+        }
+            
+        label{
+            display: flex;
+            flex-direction: row;
+            font-size: 1.2rem;
+            font-weight: 700;
+
+            &:hover{
+                color: $Moderatecyan;
+                cursor: pointer;
+            }
+            &:active{
+                color: $Moderatecyan;
+            }
+            }
+
+            span{
+                margin-top: 0;
+                margin-left: 1rem;
+                color: $Moderatecyan;
+                font-weight: 500;
+            }
+
+
+    }
+
+    .stock-mobile{
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        p{
+            margin-left: 1rem;
+        }
+    }
+
+    .stock-desktop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h4{
+            font-size: 1.5rem
+        }
+
+        h5{
+            margin: 0;
+            margin-left: 1rem;
+            color: $Darkgray;
+        }
+    }
+
+    .pledge{
+        flex-direction: row;
+        justify-content: space-between;
+        }
+
+    }
+}

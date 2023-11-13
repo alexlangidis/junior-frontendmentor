@@ -1,0 +1,90 @@
+.btn__primary {
+    background-color: $Moderatecyan;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: fit-content;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $Darkcyan;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+#btn__thanks {
+    padding: 0.5rem 2rem;
+}
+
+
+.btn__bookmark{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 50px;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+
+    img{
+        margin-right: 0rem;
+    }
+
+    span{
+        display: none;
+        color: $Darkgray;
+        font-weight: 700;
+    }
+
+    &:hover{
+
+        cursor: pointer;
+    }
+
+}
+
+.btn__out_of_stock{
+    background-color: $Darkgray;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 100%;
+    max-width: fit-content;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .btn__bookmark{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        border-radius: 50px;
+        padding: 0 1.2rem 0 0;
+       
+    
+        img{
+            margin-right: 1rem;
+        }
+    
+        span{
+            display: block;
+        }
+    
+    
+    }
+}
+
