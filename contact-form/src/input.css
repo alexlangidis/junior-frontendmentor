@@ -1,0 +1,115 @@
+@import url(https://fonts.googleapis.com/css?family=Karla:200,300,regular,500,600,700,800,200italic,300italic,italic,500italic,600italic,700italic,800italic);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  color: var(--Grey-900-darker);
+
+  /* ### Primary */
+
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+
+  /* ### Neutral */
+
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+
+body {
+  background-color: var(--Green-200-lighter);
+}
+
+@layer components {
+  .form-group {
+    @apply w-full;
+  }
+
+  label {
+    @apply text-[16px];
+  }
+  input:not([type="radio"]):not([type="checkbox"]) {
+    @apply border-[1px] border-[var(--Grey-900-darker)] p-3 rounded-md my-2 w-full cursor-pointer;
+  }
+
+  input:not([type="radio"]):not([type="checkbox"]).error {
+    @apply border-[1px] border-[var(--Red)] p-3 rounded-md my-2 w-full cursor-pointer;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):hover,
+  textarea:hover {
+    @apply border-[1px] border-[var(--Green-600-medium)];
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]):focus,
+  textarea:focus {
+    @apply outline-[1px] outline-[var(--Green-600-medium)];
+  }
+
+  .query-type {
+    @apply border-[1px] border-[var(--Grey-900-darker)] p-4 rounded-md w-full flex gap-2;
+  }
+
+  .query-type label,
+  .query-type input,
+  .query-type {
+    @apply cursor-pointer;
+  }
+
+  input[type="radio"] {
+    @apply accent-[var(--Green-600-medium)];
+  }
+
+  input[type="checkbox"] {
+    @apply accent-[var(--Green-600-medium)] cursor-pointer w-4;
+  }
+
+  .radio-selected {
+    @apply bg-[var(--Green-200-lighter)] border-[1px] border-[var(--Green-600-medium)];
+  }
+
+  .star {
+    @apply text-[var(--Green-600-medium)];
+  }
+
+  .error {
+    @apply text-[var(--Red)];
+  }
+}
+
+.toast {
+  position: fixed;
+  top: 30px;
+  width: 400px;
+  background-color: hsl(187, 24%, 22%);
+  padding: 20px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  transition: all 1s linear;
+}
+
+.toast > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toast img {
+  width: 14px;
+}
+
+.toast span {
+  font-weight: bold;
+}
+
+.toast.hidden {
+  transform: translateY(-400px);
+}

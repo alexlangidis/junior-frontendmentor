@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./src/script.js" defer></script>
+
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body
+    class="flex flex-col items-center justify-center w-full min-h-screen p-8 m-auto"
+  >
+    <div class="hidden toast">
+      <div>
+        <img src="./src/images/icon-success-check.svg" alt="toast check" />
+        <span>Message Sent!</span>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    <div class="p-8 bg-white rounded-xl form-container max-w-[650px]">
+      <h1 class="mb-4 text-2xl">Contact Us</h1>
+      <form class="flex flex-col gap-8 form">
+        <div class="flex flex-col gap-4 name-inputs md:flex-row">
+          <div class="form-group">
+            <label for="">First Name <span class="star">*</span></label>
+            <input
+              type="text"
+              id="first-name"
+              aria-required="true"
+              class="w-full"
+            />
+            <span class="hidden error" id="firstNameError"
+              >This field is required</span
+            >
+          </div>
+          <div class="form-group">
+            <label for="">Last Name <span class="star">*</span></label>
+            <input
+              type="text"
+              id="last-name"
+              aria-required="true"
+              class="w-full"
+            />
+            <span class="hidden error" id="lastNameError"
+              >This field is required</span
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="">Email Address <span class="star">*</span></label>
+          <input type="email" id="email" aria-required="true" />
+          <span class="hidden error valid" id="emailError1"
+            >Please enter a valid email address</span
+          >
+          <span class="hidden error empty" id="emailError"
+            >This field is required</span
+          >
+        </div>
+        <div class="form-group radio">
+          <label for="query">Query Type <span class="star">*</span></label>
+          <div id="query" class="flex flex-col gap-4 my-2 md:flex-row">
+            <div class="query-type">
+              <input
+                type="radio"
+                id="option1"
+                name="query-type"
+                aria-required="true"
+              />
+              <label for="option1">General Enquiry</label>
+            </div>
+            <div class="query-type">
+              <input
+                type="radio"
+                id="option2"
+                name="query-type"
+                aria-required="true"
+              />
+              <label for="option2">Support Request</label>
+            </div>
+          </div>
+          <span class="hidden error" id="queryError"
+            >Please select a query type</span
+          >
+        </div>
+        <div class="form-group">
+          <label for="message">Message <span class="star">*</span></label>
+          <textarea
+            id="message"
+            rows="4"
+            aria-required="true"
+            class="w-full p-3 my-2 cursor-pointer resize-none rounded-md border-[1px] border-[var(--Grey-900-darker)]"
+          ></textarea>
+          <span class="hidden error" id="textareaError">
+            This field is required</span
+          >
+        </div>
+        <div class="form-group checkbox">
+          <div>
+            <input type="checkbox" id="consent" aria-required="true" />
+            <label for="consent" class="cursor-pointer"
+              >I consent to being contacted by the team
+              <span class="star">*</span></label
+            >
+          </div>
+          <span class="hidden error"
+            >To submit this form, please consent to being contacted</span
+          >
+        </div>
+        <button
+          type="submit"
+          class="bg-[var(--Green-600-medium)] text-white p-4 rounded-md cursor-pointer text-xl hover:bg-green-700 btnSubmit"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+    <!-- Message Sent!
+    Thanks for completing the form. We'll be in touch soon! -->
+
+    <div class="mt-4 attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/alexlangidis"
+        >AlexLang-Dev</a
+      >.
+    </div>
+  </body>
+</html>
